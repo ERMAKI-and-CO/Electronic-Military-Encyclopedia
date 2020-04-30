@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,200,300,400,500,600,700,800,900&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/diagram.css">
+    <meta charset="utf-8">
+    <title>Главная - Электронная военная энциклопедия</title>
+</head>
+<body class="table-layout">
+    <header>
+        <nav>
+            <ul class="topmenu">
+                <li><a href="C:/Users/kiurubv/Desktop/version%201/index.html" class="active-link">Главная</a></li>
+                <li><a href="models.html" class="down">Модели</a></li>
+                <li><a href="history.html" class="down">История армии</a>
+                    <ul class="submenu">
+                        <li><a href="/history/russianimpire.html">Российская Империя</a></li>
+                        <li><a href="/history/USSR.html">СССР</a></li>
+                        <li><a href="/history/russianfederation.html">Российская Федерация</a></li>
+                    </ul>
+                </li>
+                <li><a href="C:/Users/kiurubv/Desktop/version%201/info.html">Информация</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="content">
+            <p class="text">
+                Данная энциклопедия создана в рамках проекта "Военный мир" кадета 6 "Г" класса <a href="https://petrpku.mil.ru" class="PPKU-link">Петрозаводского ПКУ</a> Киуру Богдана
+            </p>
+        </div>
+        <div class="side">
+            <div class="diagram">
+                <svg class="chart" width="300" height="300" viewBox="0 0 50 50">
+                    <circle class="unit" r="20" cx="50%" cy="50%"></circle>
+                    <circle class="unit" r="20" cx="50%" cy="50%"></circle>
+                    <circle class="unit" r="20" cx="50%" cy="50%"></circle>
+                    <circle class="unit" r="20" cx="50%" cy="50%"></circle>
+                    <circle class="unit" r="20" cx="50%" cy="50%"></circle>
+                </svg>
+                <div class="legend">
+                    <p class="title">Процентное отношение моделей на сайте</p>
+                    <ul class="caption-list">
+                        <li class="caption-item">Погоны (20%)</li>
+                        <li class="caption-item">Танки (20%)</li>
+                        <li class="caption-item">Самолеты (20%)</li>
+                        <li class="caption-item">Корабли (20%)</li>
+                        <li class="caption-item">Оружие (20%)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p class="footer-block">
+            <ul class="links-list">
+                <li><a href="https://mil.ru" target="_blank">Минестерство обороны РФ</a></li>
+                <li><a href="https://petrpku.mil.ru" target="_blank">Петрозаводское ПКУ</a></li>
+                <li><a href="http://record.mil.ru/" target="_blank">Книга рекордов ВС РФ</a></li>
+            </ul>
+        </p>
+        <p class="copy-block">
+            &copy;Киуру Богдан, 2020.
+        </p>
+        <script>
+            let captionsList = document.querySelectorAll('.caption-item');
+            let unitsList = document.querySelectorAll('.unit');
+
+            captionsList.forEach(function(item, index) {
+                item.addEventListener('mouseover', function() {
+                    unitsList[index].classList.add('hovered');
+                });
+
+                item.addEventListener('mouseout', function() {
+                    unitsList[index].classList.remove('hovered');
+                });
+            });
+
+        </script>
+    </footer>
+</body>
+</html>
